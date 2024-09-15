@@ -1,10 +1,12 @@
 <header>
 <nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
 <%= link_to 'お助け', '/', class: 'navbar-brand' %>
+<% end %>
   <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent'
   aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>
+
   <div class='collapse navbar-collapse' id='navbarSupportedContent'>
     <ul class='navbar-nav ms-auto main-nav align-items-center'>
       <li class='nav-item dropdown dropdown-slide'>
@@ -14,6 +16,7 @@
           <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
         </div>
       </li>
+
       <li class='nav-item dropdown dropdown-slide'>
         <%= link_to class: 'nav-link', data: { bs_toggle: 'dropdown' }, id: 'header-profile', aria: { haspopup: 'true', expanded: 'false' } do %>
           <span class='profile-icon'>👤</span>
