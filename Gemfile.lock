@@ -333,7 +333,7 @@ DEPENDENCIES
   rails (~> 7.2.1)
   rubocop-rails-omakase
   selenium-webdriver
-  sorcery
+  sorcery (= 0.16.3)
   sprockets-rails
   stimulus-rails
   turbo-rails
