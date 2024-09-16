@@ -1,32 +1,33 @@
 <header>
-  <nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
-    <%= link_to '/', class: 'navbar-brand' do %>
-    <% end %>
-    <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent'
-      aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-      <span class='navbar-toggler-icon'></span>
-    </button>
+<nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
+<%= link_to 'お助け', '/', class: 'navbar-brand' %>
+  <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent'
+  aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+    <span class='navbar-toggler-icon'></span>
+  </button>
 
-    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-      <ul class='navbar-nav ms-auto main-nav align-items-center'>
-        <li class='nav-item dropdown dropdown-slide'>
-          <%= link_to '掲示板', '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }, id: 'header-board-menu' %>
-          <div class='dropdown-menu dropdown-menu-end'>
-            <%= link_to '掲示板一覧', '#', class: 'dropdown-item' %>
-          </div>
-        </li>
+  <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+    <ul class='navbar-nav ms-auto main-nav align-items-center'>
+      <li class='nav-item dropdown dropdown-slide'>
+        <%= link_to '掲示板', '#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }, id: 'header-board-menu' %>
+        <div class='dropdown-menu dropdown-menu-end'>
+          <%= link_to '掲示板一覧', '#', class: 'dropdown-item' %>
+          <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
+        </div>
+      </li>
 
-        <li class='nav-item dropdown dropdown-slide'>
-          <%= link_to '#', class: 'nav-link', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }, id: 'header-profile' do %>
-            <span class='profile-icon'>👤</span> 
-          <% end %>
-          <div class='dropdown-menu dropdown-menu-end'>
-            <div class='dropdown-divider'></div>
-            <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
-            <%= link_to 'ログアウト', '#', class: 'dropdown-item' %>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <li class='nav-item dropdown dropdown-slide'>
+        <%= link_to class: 'nav-link', data: { bs_toggle: 'dropdown' }, id: 'header-profile', aria: { haspopup: 'true', expanded: 'false' } do %>
+          <span class='profile-icon'>👤</span>
+        <% end %>
+        <div class='dropdown-menu dropdown-menu-end'>
+          <div class='dropdown-item'></div>
+          <div class='dropdown-divider'></div>
+          <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
+          <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
 </header>
